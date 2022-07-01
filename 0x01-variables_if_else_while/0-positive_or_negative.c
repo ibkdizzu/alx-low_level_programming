@@ -2,11 +2,14 @@
 
 #include <time.h>
 
-/* more headers goes there */
+#include <stdio.h>
 
 
-
-/* betty style doc for function main goes there */
+/**
+ *main - test a random integer for positivity or negativity.
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 
@@ -21,9 +24,9 @@ int main(void)
 				n = rand() - RAND_MAX / 2;
 
 				if (n >= 0){
-					printf("%n is positive\n", n);
+					printf("%d is positive\n", n);
 				}else{
-					printf("%n is negative\n", n);
+					printf("%d is negative\n", n);
 				}
 
 					return (0);
