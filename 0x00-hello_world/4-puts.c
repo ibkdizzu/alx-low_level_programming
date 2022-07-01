@@ -2,7 +2,8 @@
  * Task: compile and print
  */
 #include <stdio.h>
-/* main: print a string.
+/* 
+ * main: print a string.
  * Return: Always0.
  */
 int main(void)
