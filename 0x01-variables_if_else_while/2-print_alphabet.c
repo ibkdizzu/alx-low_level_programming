@@ -4,7 +4,7 @@
 
 /**
  *
- * main - Prints the alphabet.
+ * main - Prints alphabets in uppercase and lowercase
  *
  * Return: Always 0
  *
@@ -20,7 +20,7 @@ int main(void)
 
 				for (i = 0; i < 26; i++)
 				{
-					putchr(alp[i]);
+					putchar(alp[i]);
 				}
 
 				putchar('\n');
