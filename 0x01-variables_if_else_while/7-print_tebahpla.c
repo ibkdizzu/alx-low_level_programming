@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int ch= 122;
+	int ch = 122;
 
 	while (ch > 96)
 	{
