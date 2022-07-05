@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char *x = "some text";
+	char *x = "_putchar";
 
 	while (x)
 	{
