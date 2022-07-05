@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stdio.h"
 
 /**
  * main - print char
@@ -9,12 +8,12 @@
 
 int main(void)
 {
-	char text = "some text";
+	char *x = "some text";
 
-	while (text)
+	while (x)
 	{
-		_putchar(text);
-		text++;
+		_putchar(*x);
+		x++;
 	}
 	_putchar('\n');
 	return(0);
