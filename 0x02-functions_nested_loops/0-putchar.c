@@ -8,16 +8,25 @@
 
 int main(void)
 {
-	int i, text[256];
-	
-	i=0;
-	text[]="_putchar";
+ _putchar('_');
 
-	while (i < 8)
-	{
-		_putchar(text[i]);
-		i++;
-	}
-	_putchar('\n');
-	return(0);
+ _putchar('p');
+
+ _putchar('u');
+
+ _putchar('t');
+
+ _putchar('c');
+
+ _putchar('h');
+
+ _putchar('a');
+
+ _putchar('r');
+
+ _putchar('\n');
+
+
+
+ return (0)
 }
