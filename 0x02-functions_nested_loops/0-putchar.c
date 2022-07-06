@@ -8,7 +8,10 @@
 
 int main(void)
 {
-	int i=0;  text[]="_putchar";
+	int i, text;
+	
+	i=0;
+	text[]="_putchar";
 
 	while (i < 8)
 	{
