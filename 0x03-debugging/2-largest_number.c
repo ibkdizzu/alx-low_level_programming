@@ -9,28 +9,22 @@
  * Return: largest number
  */
 
-if (a > b && a > c)
+int largest_number(int a, int b, int c)
 {
+	int largest;
 
-	largest = a;
+	if (a >= b && a >= c)
+	{
+		largest = a;
+	}
+	else if (b >= a && b >= c)
+	{
+		largest = b;
+	}
+	else
+	{
+		largest = c;
+	}
 
-}
-else if (b > c)
-
-{
-
-	largest = b;
-
-}
-
-else
-
-{
-
-	largest = c;
-
-}
-
-return (largest);
-
+	return (largest);
 }
