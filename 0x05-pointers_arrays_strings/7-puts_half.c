@@ -14,7 +14,7 @@ void puts_half(char *str)
 		len++;
 
 	if ((len % 2) == 0)
-		n = len /2;
+		n = len / 2;
 	else
 		n = (len + 1) / 2;
 
@@ -22,5 +22,4 @@ void puts_half(char *str)
 		_putchar(str[index]);
 
 	_putchar('\n');
-}
-		
+}		
