@@ -3,40 +3,32 @@
 #include "main.h"
 
 /**
- * alloc_grid - nested loop to make grid
- * @width: width input
- * @height: height input
- * Return: pointer to 2 dim. array
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
-int **alloc_grid(int width, int height)
+char *_strdup(char *str)
 {
-	int **iarray;
-	int i, n;
+	char *dup;
+	unsigned int i, len;
 
-	if (width <= 0 || height <= 0)
+	i = 0;
+	len = 0;
+
+	if (str == NULL)
 		return (NULL);
 
-	iarray = malloc(sizeof(int) * height);
+	while (str[len])
+		len++;
 
-	if (iarray == NULL)
-	{
-		free(iarray);
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
 		return (NULL);
-	}
 
-	for (i = 0; i < height; i++)
-	{
-		iarray[i] = malloc(sizeof(int) * width);
-		if (iarray == NULL)
-		{
-			free(iarray);
-			return (NULL);
-		}
+	while ((dup[i] = str[i]) != '\0')
+		i++;
 
-		for (n = 0; n < width; n++)
-		{
-			iarray[i][n] = 0;
-		}
-	}
-	return (iarray);
+	return (dup);
 }
