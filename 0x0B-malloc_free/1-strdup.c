@@ -3,44 +3,40 @@
 #include "main.h"
 
 /**
- * **alloc_grid - creates a two dimensional array of ints
- * @width: width of the matrix
- * @height: height of the matrix
- *
- * Return: pointer to the created matrix (Success)
- * or NULL (Error)
+ * alloc_grid - nested loop to make grid
+ * @width: width input
+ * @height: height input
+ * Return: pointer to 2 dim. array
  */
 int **alloc_grid(int width, int height)
 {
-	int **arr;
-	int i, j;
+	int **iarray;
+	int i, n;
 
-	if (height <= 0 || width <= 0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	arr = (int **) malloc(sizeof(int *) * height);
+	iarray = malloc(sizeof(int) * height);
 
-	if (arr == NULL)
+	if (iarray == NULL)
+	{
+		free(iarray);
 		return (NULL);
+	}
 
 	for (i = 0; i < height; i++)
 	{
-		arr[i] = (int *) malloc(sizeof(int) * width);
-		if (arr[i] == NULL)
+		iarray[i] = malloc(sizeof(int) * width);
+		if (iarray == NULL)
 		{
-			free(arr);
-			for (j = 0; j <= i; j++)
-				free(arr[j]);
+			free(iarray);
 			return (NULL);
 		}
-	}
 
-	for (i = 0; i < height; i++)
-	{
-		for (j = 0; j < width; j++)
+		for (n = 0; n < width; n++)
 		{
-			arr[i][j] = 0;
+			iarray[i][n] = 0;
 		}
 	}
-	return (arr);
+	return (iarray);
 }
