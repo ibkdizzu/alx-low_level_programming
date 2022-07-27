@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include "main.h"
 
-#include <stdlib.h>
-#include "holberton.h"
-
 /**
  * free_grid - frees the memory allocate for the grid
  * created by alloc_grid()
