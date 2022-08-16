@@ -64,11 +64,6 @@ size_t print_listint_safe(const listint_t *head)
 		nnodes++;
 	}
 
-<<<<<<< HEAD
 	free_listp(&hptr);
 	return (nnodes);
 }
-=======
-	return (0);
-}
->>>>>>> 61b1fd6a466216e3b782fc8e597fdf33ab1e2ce2
