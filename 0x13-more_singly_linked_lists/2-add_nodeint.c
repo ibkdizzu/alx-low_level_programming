@@ -21,5 +21,3 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	return (new);
 }
-Footer
-© 2022 GitHub, I
