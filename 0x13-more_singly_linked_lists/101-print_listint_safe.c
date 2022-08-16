@@ -60,11 +60,10 @@ size_t looped_listint_len(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes, index = 0;
+	size_t num = 0;
+	long int diff;
 
-	nodes = looped_listint_len(head);
-
-	if (nodes == 0)
+	while (head)
 	{
 		for (; head != NULL; nodes++)
 		{
@@ -84,5 +83,5 @@ size_t print_listint_safe(const listint_t *head)
 		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 
-	return (nodes);
+	return (num);
 }
