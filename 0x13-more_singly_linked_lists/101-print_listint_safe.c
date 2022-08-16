@@ -1,24 +1,29 @@
 #include "lists.h"
+
 /**
- * add_nodeint - Entry Point
- * @head: head
- * @n: value
- * Return: 0
+ * print_listint_safe - prints a linked list, safely
+ * @head: list of type listint_t to print
+ *
+ * Return: number of nodes in the list
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *new;
+	size_t num = 0;
+	long int diff;
 
-	if (head == NULL)
-		return (NULL);
+	while (head)
+	{
+		diff = head - head->next;
+		num++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (diff > 0)
+			head = head->next;
+		else
+		{
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+			break;
+		}
+	}
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-
-	new->n = n;
-	new->next = *head;
-	*head = new;
-
-	return (new);
+	return (num);
 }
