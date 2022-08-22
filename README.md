@@ -1,1 +1,1 @@
-Alll about memory allocation
+All about memory allocation
